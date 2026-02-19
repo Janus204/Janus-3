@@ -259,16 +259,45 @@ body{
 <body>
 
 <!-- NAVBAR -->
-<nav class="custom-navbar">
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar custom-navbar fixed-top">
   <div class="container d-flex justify-content-between align-items-center">
-    <a href="index.html">
-      <img src="images/logo.svg">
+
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo.svg" alt="Dekhlaw" height="40">
     </a>
-    <div class="menu-toggle" id="menuToggle">
-      <span></span><span></span><span></span>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menuToggle" aria-label="Open Menu" role="button" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+
   </div>
 </nav>
+
+<!-- ================= MOBILE OVERLAY MENU ================= -->
+<div class="mobile-menu" id="mobileMenu">
+
+  <div class="menu-header">
+    <a href="index.html">
+      <img src="images/logo.svg" alt="Dekhlaw" height="40">
+    </a>
+    <div class="close-menu" id="closeMenu" aria-label="Close Menu" role="button">&times;</div>
+  </div>
+
+  <div class="menu-links">
+    <a href="about.html">About Us</a>
+    <a href="lawyer-registration.html">Register As a Lawyer</a>
+    <a href="user-registration.html">Register As a User</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="lawyers.html">Find A Lawyer Instantly/Nearby</a>
+  </div>
+
+</div>
+
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
@@ -416,3 +445,4 @@ closeMenu.onclick=()=>mobileMenu.classList.remove("active");
 
 </body>
 </html>
+
