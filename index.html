@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dekhlaw - Trusted Lawyers</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  
+
+
+
+
+
+
+
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar custom-navbar fixed-top">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="images/logo.svg" alt="Dekhlaw" height="40">
+    </a>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span><video src=""></video>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ================= MOBILE OVERLAY MENU ================= -->
+<div class="mobile-menu" id="mobileMenu">
+
+  <div class="menu-header">
+    <a href="index.html">
+      <img src="images/logo.svg" alt="Dekhlaw" height="40">
+
+    </a>
+    <div class="close-menu" id="closeMenu">&times;</div>
+  </div>
+
+  <div class="menu-links">
+    <a href="#">About Us</a>
+    <a href="lawyer-registration.html">Register As a Lawyer</a>
+    <a href="#">Register As a User</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Find A Lawyer Instantly/Nearby</a>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+  <div class="container text-center py-5">
+
+    <div data-aos="fade-up">
+      <h1 class="hero-title">
+        Connect with Trusted Lawyers <br>
+        Across Delhi & NCR
+      </h1>
+    </div>
+
+    <div data-aos="fade-up" data-aos-delay="150">
+      <p class="hero-subtitle">
+        Choose from over 15,000 lawyers across 1000+ cities in India
+      </p>
+    </div>
+
+    <div class="mt-4" data-aos="fade-up" data-aos-delay="250">
+      <button class="btn btn-outline-dark hero-outline-btn">
+        <i class="bi bi-search me-2"></i>Find Verified Lawyers Across India
+      </button>
+    </div>
+
+    <div class="mt-3" data-aos="fade-up" data-aos-delay="350">
+      <button class="btn hero-dark-btn pulse-btn">
+  Sign Up As A Lawyer/User
+</button>
+
+    </div>
+
+    <!-- SEARCH BOX -->
+    <div class="search-box mt-5" data-aos="fade-up" data-aos-delay="450">
+      <h5 class="mb-4 fw-semibold">Find Verified Lawyers Near You</h5>
+
+      <div class="row g-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control custom-input"
+            placeholder="Search lawyer in your city">
+        </div>
+
+        <div class="col-md-6">
+          <select class="form-select custom-input">
+            <option selected>Select Required Areas</option>
+            <option>Criminal Law</option>
+            <option>Family Law</option>
+            <option>Corporate Law</option>
+            <option>Property Law</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn search-btn mt-4 w-100">Search</button>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats mt-5" data-aos="fade-up" data-aos-delay="600">
+
+  <div class="row text-center gy-4">
+
+    <div class="col-6 col-md-3 stat-item">
+      <h4>
+        <span class="counter" data-target="24">0</span>/7
+      </h4>
+      <p>Availability</p>
+    </div>
+
+    <div class="col-6 col-md-3 stat-item">
+      <h4>
+        <span class="counter" data-target="2">0</span> Min
+      </h4>
+      <p>Response</p>
+    </div>
+
+    <div class="col-6 col-md-3 stat-item">
+      <h4>
+        <span class="counter" data-target="10">0</span>+
+      </h4>
+      <p>Legal Areas</p>
+    </div>
+
+    <div class="col-6 col-md-3 stat-item">
+      <h4>
+        <span class="counter" data-target="100">0</span>%
+      </h4>
+      <p>Confidential</p>
+    </div>
+
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="top-lawyers-section py-5">
+
+  <div class="container h-100 d-flex flex-column justify-content-center">
+
+    <h2 class="section-title text-center mb-5">
+      Top-rated lawyers in India
+    </h2>
+
+    <div class="row g-4">
+
+      <!-- CARD 1 -->
+      <div class="col-6 col-md-4">
+        <div class="lawyer-card">
+          <div class="image-wrapper">
+            <img src="https://images.unsplash.com/photo-1619699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+                 alt="Adv. Riya Sharma"
+                 class="lawyer-img">
+          </div>
+          <div class="lawyer-info">
+            <p><strong>Name:</strong> Adv. Riya Sharma</p>
+            <p><strong>Location:</strong> Delhi</p>
+            <p><strong>Expertise:</strong> Criminal</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="col-6 col-md-4">
+        <div class="lawyer-card">
+          <div class="image-wrapper">
+            <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=800&q=80"
+                 alt="Adv. Arjun Mehta"
+                 class="lawyer-img">
+          </div>
+          <div class="lawyer-info">
+            <p><strong>Name:</strong> Adv. Arjun Mehta</p>
+            <p><strong>Location:</strong> Delhi</p>
+            <p><strong>Expertise:</strong> Corporate</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-6 col-md-4">
+        <div class="lawyer-card">
+          <div class="image-wrapper">
+            <img src="https://images.unsplash.com/photo-1616587894289-86480e533129?auto=format&fit=crop&w=800&q=80"
+                 alt="Adv. Neha Kapoor"
+                 class="lawyer-img">
+          </div>
+          <div class="lawyer-info">
+            <p><strong>Name:</strong> Adv. Neha Kapoor</p>
+            <p><strong>Location:</strong> Delhi</p>
+            <p><strong>Expertise:</strong> Family Law</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="col-6 col-md-4">
+        <div class="lawyer-card">
+          <div class="image-wrapper">
+            <img src="https://images.unsplash.com/photo-1601972599720-36938d4ecd31?auto=format&fit=crop&w=800&q=80"
+                 alt="Adv. Kopal Malhotra"
+                 class="lawyer-img">
+          </div>
+          <div class="lawyer-info">
+            <p><strong>Name:</strong> Adv. Kopal Malhotra</p>
+            <p><strong>Location:</strong> Delhi</p>
+            <p><strong>Expertise:</strong> Civil</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="col-6 col-md-4">
+        <div class="lawyer-card">
+          <div class="image-wrapper">
+            <img src="https://images.unsplash.com/photo-1606914501449-5a96b6ce24ca?auto=format&fit=crop&w=800&q=80"
+                 alt="Adv. Priya Verma"
+                 class="lawyer-img">
+          </div>
+          <div class="lawyer-info">
+            <p><strong>Name:</strong> Adv. Priya Verma</p>
+            <p><strong>Location:</strong> Delhi</p>
+            <p><strong>Expertise:</strong> Property</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="col-6 col-md-4">
+        <div class="lawyer-card">
+          <div class="image-wrapper">
+            <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=800&q=80"
+                 alt="Adv. Prateek Sharma"
+                 class="lawyer-img">
+          </div>
+          <div class="lawyer-info">
+            <p><strong>Name:</strong> Adv. Prateek Sharma</p>
+            <p><strong>Location:</strong> Delhi</p>
+            <p><strong>Expertise:</strong> Criminal</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- VIEW MORE BUTTON -->
+    <div class="text-center mt-5">
+      <a href="lawyers.html" class="view-more-btn">
+        View More Lawyers →
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="legal-answers-section">
+
+  <div class="container">
+
+    <h2 class="answers-title text-center">
+      Latest Legal Answers
+    </h2>
+
+    <p class="answers-subtitle text-center mb-5">
+      Legal q/a  typesetting industry
+    </p>
+
+    <!-- SLIDER -->
+    <div class="swiper answersSwiper">
+
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="answer-card">
+            <div class="answer-badge">A</div>
+            <h5 class="answer-heading">
+              Society Not Permitting Renting of Flat...
+            </h5>
+            <p class="answer-text">
+              My wife (Hindu) is the sole nominee of her mother’s flat in Mumbai.
+              After her mother’s death the flat was given on rent for about 12 years.
+              Now the society has barred her from renting the flat.
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="answer-card">
+            <div class="answer-badge">B</div>
+            <h5 class="answer-heading">
+              Property Dispute Between Siblings
+            </h5>
+            <p class="answer-text">
+              There is an ongoing dispute regarding ancestral property division.
+              One sibling refuses to cooperate.
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="answer-card">
+            <div class="answer-badge">C</div>
+            <h5 class="answer-heading">
+              Delay in Possession by Builder
+            </h5>
+            <p class="answer-text">
+              The builder has delayed possession for more than 2 years.
+              Can I claim compensation legally?
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- NAVIGATION BUTTONS -->
+    <div class="answers-navigation text-center mt-4">
+      <button class="answers-prev">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+      <button class="answers-next">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="why-choose-section">
+
+  <div class="container text-center">
+
+    <h2 class="why-title">
+      Why People Choose Us
+    </h2>
+
+    <p class="why-subtitle">
+      People choose us for instant access to verified advocates, affordable
+      per-minute pricing, and secure, confidential legal consultations.
+    </p>
+
+    <div class="row why-features">
+
+      <!-- Feature 1 -->
+      <div class="col-6 col-lg-3 feature-item">
+        <div class="feature-icon">
+          <i class="bi bi-patch-check-fill"></i>
+        </div>
+        <h5>Expert Lawyers</h5>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="col-6 col-lg-3 feature-item">
+        <div class="feature-icon">
+            <i class="bi bi-building-fill"></i>
+        </div>
+        <h5>Fast Legal Help</h5>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="col-6 col-lg-3 feature-item">
+        <div class="feature-icon">
+          <i class="bi bi-cash-coin"></i>
+        </div>
+        <h5>Budget Friendly</h5>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="col-6 col-lg-3 feature-item">
+        <div class="feature-icon">
+          <i class="bi bi-shield-lock-fill"></i>
+        </div>
+        <h5>100% Confidential</h5>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="practice-area-section">
+
+  <div class="container text-center">
+
+    <h2 class="practice-title">
+      Find lawyers by practice area
+    </h2>
+
+    <p class="practice-subtitle">
+      Explore qualified lawyers by practice area and get reliable legal advice instantly.
+    </p>
+
+    <h5 class="practice-india-title">
+      Lawyers in India
+    </h5>
+
+    <div class="practice-wrapper">
+
+      <!-- LEFT COLUMN -->
+      <div class="practice-column">
+        <ul>
+          <li>Divorce Lawyers</li>
+          <li>Property Lawyers</li>
+          <li>Civil Lawyers</li>
+          <li>Criminal Lawyers</li>
+          <li>Family Lawyers</li>
+          <li>Cheque Bounce Lawyers</li>
+          <li>Labour and Service Lawyers</li>
+          <li>Consumer Court Lawyers</li>
+          <li>Motor Accident Lawyers</li>
+          <li>Supreme Court Lawyers</li>
+        </ul>
+      </div>
+
+      <!-- CENTER DIVIDER -->
+      <div class="divider-column">
+        <div class="vertical-line"></div>
+        <div class="center-icon">
+          <i class="bi bi-eye-fill"></i>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="practice-column">
+        <ul>
+          <li>Divorce Legal Advice</li>
+          <li>Property Legal Advice</li>
+          <li>Criminal Legal Advice</li>
+          <li>Recovery Legal Advice</li>
+          <li>Consumer Legal Advice</li>
+          <li>Cheque Bounce Legal Advice</li>
+          <li>Indian Kanoon</li>
+          <li>Legal Forms</li>
+          <li>Legal Help Center</li>
+          <li>Posh Training</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="view-all-wrapper">
+      <a href="#" class="view-all-btn">
+        View All <i class="bi bi-chevron-down"></i>
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="how-it-works-section">
+
+  <div class="container">
+
+    <div class="text-start mb-5">
+      <h2 class="how-title">How It Works</h2>
+      <p class="how-subtitle">
+        Choose advocate, connect instantly, get legal advice, pay per minute.
+      </p>
+    </div>
+
+    <div class="row g-5">
+
+      <!-- Step 1 -->
+      <div class="col-12 col-lg-3">
+        <div class="how-card">
+          <div class="how-icon">
+            <i class="bi bi-person"></i>
+          </div>
+          <h5>Choose Advocate</h5>
+          <p>Browse verified advocates by practice area & price.</p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="col-12 col-lg-3">
+        <div class="how-card">
+          <div class="how-icon">
+            <i class="bi bi-wifi"></i>
+          </div>
+          <h5>Connect Instantly</h5>
+          <p>Call or video-consult the advocate in one click.</p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="col-12 col-lg-3">
+        <div class="how-card">
+          <div class="how-icon">
+            <i class="bi bi-chat-dots"></i>
+          </div>
+          <h5>Get Legal Advice</h5>
+          <p>Discuss your issue and get legal guidance.</p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="col-12 col-lg-3">
+        <div class="how-card">
+          <div class="how-icon">
+            <i class="bi bi-currency-rupee"></i>
+          </div>
+          <h5>Pay Per Minute</h5>
+          <p>Pay only for the time you talk — no hidden charges.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="client-testimonial-section">
+
+  <div class="container text-center">
+
+    <h2 class="testimonial-title">
+      What Our Clients Say
+    </h2>
+
+    <p class="testimonial-subtitle">
+      Read what our clients say about their lawyer experiences here.
+    </p>
+
+    <div class="swiper clientSwiper">
+
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">R</div>
+            <h5>Rohit S. – Delhi</h5>
+            <p>
+              “I was worried about my property dispute, but the lawyer I connected
+              with through DekhLaw guided me patiently and explained every step.
+              The whole process became much easier than I imagined.”
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">A</div>
+            <h5>Anjali M. – Mumbai</h5>
+            <p>
+              “Professional and quick response. I got legal clarity within minutes.
+              The consultation was smooth and transparent.”
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">K</div>
+            <h5>Karan P. – Bangalore</h5>
+            <p>
+              “Very helpful platform. The advocate was experienced and explained
+              my case clearly. I highly recommend this service.”
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">S</div>
+            <h5>Simran T. – Pune</h5>
+            <p>
+              “Affordable pricing and clear communication. The process was easy
+              and stress-free.”
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="testimonial-navigation">
+      <button class="testimonial-prev">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+      <button class="testimonial-next">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="main-footer">
+  <div class="footer-container">
+
+    <!-- TOP SECTION -->
+    <div class="footer-top">
+
+      <!-- Lawyers in India -->
+      <div class="footer-column">
+        <h5 class="footer-title">Lawyers in India</h5>
+        <ul class="footer-list">
+          <li>Divorce Lawyers</li>
+          <li>Property Lawyers</li>
+          <li>Civil Lawyers</li>
+          <li>Criminal Lawyers</li>
+          <li>Family Lawyers</li>
+          <li>Cheque Bounce Lawyers</li>
+          <li>Labour and Service Lawyers</li>
+          <li>Consumer Court</li>
+          <li>Motor Accident Lawyers</li>
+          <li>Supreme Court Lawyers</li>
+        </ul>
+      </div>
+
+      <!-- Legal Advice -->
+      <div class="footer-column">
+        <h5 class="footer-title">Legal Advice</h5>
+        <ul class="footer-list">
+          <li>Divorce Legal Advice</li>
+          <li>Property Legal Advice</li>
+          <li>Criminal Legal Advice</li>
+          <li>Recovery Legal Advice</li>
+          <li>Consumer Legal Advice</li>
+          <li>Cheque Bounce Legal Advice</li>
+          <li>Indian Kanoon</li>
+          <li>Legal Forms</li>
+          <li>Legal Help Center</li>
+          <li>Posh Training</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="footer-divider">
+
+    <!-- LINKS -->
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Lawyers in India</a>
+    </div>
+
+    <!-- SOCIAL ICONS -->
+    <div class="footer-social-row">
+      <a href="https://www.linkedin.com/in/dekhlaw-9558883a6" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://x.com/dekhlaw73511?s=21" target="_blank">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61586481491937" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/dekhlaw.legal" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+
+    <hr class="footer-divider">
+
+    <!-- DISCLAIMER -->
+    <div class="footer-disclaimer">
+      <p>
+        It is solely available at your request for informational purposes only,
+        should not be interpreted as soliciting or advertisement. In cases where
+        the user has any legal issues, he/she must seek independent legal advice.
+      </p>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      DekhLaw All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>

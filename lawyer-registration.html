@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dekhlaw - Register As Lawyer</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+v
+<style>
+
+/* ================= ROOT ================= */
+:root{
+  --primary-dark:#000;
+  --accent-gold:#caa24f;
+  --light-bg:#f3f3f3;
+  --transition: all .3s ease;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family:'Inter',sans-serif;
+  margin:0;
+  overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+.custom-navbar{
+  background:#000;
+  height:4.5rem;
+  display:flex;
+  align-items:center;
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:1000;
+}
+
+.menu-toggle{
+  width:1.8rem;
+  display:flex;
+  flex-direction:column;
+  gap:.35rem;
+  cursor:pointer;
+}
+
+.menu-toggle span{
+  height:.12rem;
+  background:#fff;
+  width:100%;
+}
+
+/* ================= MOBILE MENU ================= */
+.mobile-menu{
+  position:fixed;
+  top:0;
+  right:-100%;
+  width:100%;
+  height:100vh;
+  background:var(--light-bg);
+  padding:2rem;
+  transition:.4s ease;
+  z-index:2000;
+  display:flex;
+  flex-direction:column;
+}
+
+.mobile-menu.active{ right:0 }
+
+.menu-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:3rem;
+}
+
+.close-menu{
+  font-size:2.5rem;
+  cursor:pointer;
+}
+
+.menu-links{
+  display:flex;
+  flex-direction:column;
+  gap:2rem;
+}
+
+.menu-links a{
+  text-decoration:none;
+  font-size:1.3rem;
+  color:#000;
+  border-bottom:1px solid #000;
+  padding-bottom:.8rem;
+}
+
+/* ================= PAGE HEADER ================= */
+.register-header{
+  padding-top:7rem;
+  padding-bottom:1.5rem;
+  background:var(--light-bg);
+}
+
+.register-small-title{
+  color:var(--accent-gold);
+  font-weight:700;
+  font-size:clamp(1rem,2vw,1.3rem);
+}
+
+.register-subtitle{
+  font-size:clamp(1rem,2.5vw,1.2rem);
+  margin:0;
+}
+
+/* ================= BANNER ================= */
+.register-banner img{
+  width:100%;
+  height:40vh;
+  min-height:18rem;
+  max-height:30rem;
+  object-fit:cover;
+}
+
+/* ================= FORM SECTION ================= */
+.register-form-section{
+  background:var(--accent-gold);
+  padding:5rem 1rem;
+  min-height:60vh;
+}
+
+.register-content{
+  max-width:42rem;
+  margin:auto;
+}
+
+.register-content h2{
+  color:#fff;
+  font-weight:700;
+  font-size:clamp(1.5rem,4vw,2rem);
+  margin-bottom:1rem;
+}
+
+.register-description{
+  font-size:clamp(.95rem,2vw,1.1rem);
+  margin-bottom:2.5rem;
+}
+
+.registration-form input,
+.registration-form select{
+  width:100%;
+  padding:.9rem 1rem;
+  margin-bottom:1.2rem;
+  border:none;
+  background:#eaeaea;
+  font-size:.95rem;
+}
+
+.registration-form input:focus,
+.registration-form select:focus{
+  background:#fff;
+  outline:none;
+}
+
+.file-input{
+  background:#eaeaea;
+  padding:.9rem 1rem;
+  margin-bottom:1.2rem;
+  position:relative;
+}
+
+.file-input input{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  cursor:pointer;
+}
+
+.register-btn{
+  background:#000;
+  color:#fff;
+  border:none;
+  padding:1rem 2rem;
+  font-weight:600;
+  margin-top:1.5rem;
+  transition:var(--transition);
+}
+
+.register-btn:hover{
+  transform:translateY(-.2rem);
+  background:#222;
+}
+
+/* ================= FOOTER ================= */
+.main-footer{
+  background:#000;
+  color:#fff;
+  padding:4rem 0 2rem;
+  text-align:center;
+}
+
+.footer-title{
+  font-weight:700;
+  margin-bottom:1rem;
+}
+
+.footer-list{
+  list-style:none;
+  padding:0;
+}
+
+.footer-list li{
+  margin-bottom:.5rem;
+  font-size:.9rem;
+}
+
+.footer-divider{
+  border-top:1px solid #333;
+  margin:2rem 0;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  gap:2rem;
+  flex-wrap:wrap;
+}
+
+.footer-links a{
+  color:#fff;
+  text-decoration:none;
+  font-size:.9rem;
+}
+
+.footer-disclaimer{
+  max-width:60rem;
+  margin:auto;
+  font-size:.85rem;
+  color:#bbb;
+  line-height:1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+  .register-banner img{
+    height:30vh;
+  }
+  .register-form-section{
+    padding:3.5rem 1rem;
+  }
+  .register-btn{
+    width:100%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="custom-navbar">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a href="index.html">
+      <img src="images/logo.svg">
+    </a>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="menu-header">
+    <img src="https://dummyimage.com/120x40/000/fff&text=DEKHLAW" height="35">
+    <div class="close-menu" id="closeMenu">&times;</div>
+  </div>
+  <div class="menu-links">
+    <a href="#">Home</a>
+    <a href="#">About Us</a>
+    <a href="#">Register As a Lawyer</a>
+    <a href="#">Register As a User</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Find A Lawyer Instantly/Nearby</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<section class="register-header">
+  <div class="container">
+    <h5 class="register-small-title">Register As A Lawyer</h5>
+    <p class="register-subtitle">Clients Are Searching. List Yourself Free</p>
+  </div>
+</section>
+
+<!-- BANNER -->
+<section class="register-banner">
+  <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1920&auto=format&fit=crop">
+</section>
+
+<!-- FORM -->
+<section class="register-form-section">
+  <div class="container">
+    <div class="register-content">
+      <h2>Be Found. Be Trusted. Get Clients.<br>Free Registration</h2>
+      <p class="register-description">
+        Join early and get priority access to upcoming professional features
+      </p>
+
+      <form class="registration-form">
+        <input type="text" placeholder="Name*" required>
+        <input type="tel" placeholder="Phone No.*" required>
+
+        <div class="file-input">
+          <i class="bi bi-upload me-2"></i> Profile Photo
+          <input type="file">
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-6">
+            <select required>
+              <option selected disabled>City & State*</option>
+              <option>Delhi</option>
+              <option>Mumbai</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <select required>
+              <option selected disabled>Practice Area*</option>
+              <option>Criminal Law</option>
+              <option>Family Law</option>
+            </select>
+          </div>
+        </div>
+
+        <select required>
+          <option selected disabled>Years of Experience*</option>
+          <option>1–3 Years</option>
+          <option>3–5 Years</option>
+        </select>
+
+        <select required>
+          <option selected disabled>Specialized Area*</option>
+          <option>Cyber Crime</option>
+          <option>Property</option>
+        </select>
+
+        <input type="text" placeholder="Bar Council Registration Number*" required>
+        <input type="text" placeholder="Court of Practice*" required>
+
+        <div class="form-check mt-3">
+          <input class="form-check-input" type="checkbox" checked>
+          <label class="form-check-label">Click to get updates on Whatsapp</label>
+        </div>
+
+        <button type="submit" class="register-btn">Register Now</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h5 class="footer-title">Lawyers in India</h5>
+        <ul class="footer-list">
+          <li>Divorce Lawyers</li>
+          <li>Property Lawyers</li>
+          <li>Criminal Lawyers</li>
+          <li>Family Lawyers</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h5 class="footer-title">Legal Advice</h5>
+        <ul class="footer-list">
+          <li>Divorce Legal Advice</li>
+          <li>Property Legal Advice</li>
+          <li>Criminal Legal Advice</li>
+          <li>Legal Forms</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Lawyers in India</a>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-disclaimer">
+      It is solely available at your request for informational purposes only.
+      Users must seek independent legal advice.
+    </div>
+
+    <div style="margin-top:1rem;font-size:.9rem;">
+      DekhLaw All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+const menuToggle=document.getElementById("menuToggle");
+const mobileMenu=document.getElementById("mobileMenu");
+const closeMenu=document.getElementById("closeMenu");
+
+menuToggle.onclick=()=>mobileMenu.classList.add("active");
+closeMenu.onclick=()=>mobileMenu.classList.remove("active");
+</script>
+
+</body>
+</html>

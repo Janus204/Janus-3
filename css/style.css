@@ -1,0 +1,747 @@
+/* ===========================
+   ROOT & GLOBAL
+=========================== */
+
+:root {
+  --primary-dark: #000;
+  --accent-gold: #caa24f;
+  --light-bg: #f3f3f3;
+  --text-muted: #666;
+  --transition: all 0.3s ease;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= MOBILE FULLSCREEN MENU ================= */
+
+.custom-navbar {
+  background: #000;
+  height: 70px;
+  z-index: 999;
+}
+
+.menu-toggle {
+  width: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu-toggle span {
+  height: 2px;
+  background: #fff;
+  width: 100%;
+  transition: 0.3s;
+}
+
+/* FULLSCREEN MENU */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: #f3f3f3;
+  padding: 30px;
+  transition: 0.4s ease;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.close-menu {
+  font-size: 40px;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 22px;
+  font-weight: 500;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #000;
+  transition: 0.3s;
+}
+
+.menu-links a:hover {
+  color: var(--accent-gold);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-bg);
+  padding: 100px 0 60px;
+}
+
+.hero-title {
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: #555;
+}
+
+/* Buttons */
+
+.hero-outline-btn,
+.hero-dark-btn,
+.search-btn {
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.hero-outline-btn {
+  border: 2px solid var(--primary-dark);
+}
+
+.hero-outline-btn:hover {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+.hero-dark-btn {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+.hero-dark-btn:hover {
+  background: #222;
+}
+
+.pulse-btn {
+  animation: premiumPulse 1.5s infinite;
+}
+
+.pulse-btn:hover {
+  animation: none;
+  transform: scale(1.05);
+}
+
+@keyframes premiumPulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Search */
+
+.search-box {
+  background: #fff;
+  padding: 35px;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.custom-input {
+  height: 50px;
+  border-radius: 4px;
+}
+
+.search-btn {
+  background: var(--accent-gold);
+  color: #fff;
+  border: none;
+}
+
+.search-btn:hover {
+  background: #b88e3f;
+}
+
+/* Stats */
+
+.stat-item h4 {
+  font-weight: 800;
+  font-size: 1.6rem;
+}
+
+.stat-item p {
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+/* ===========================
+   TOP LAWYERS
+=========================== */
+
+.top-lawyers-section {
+  padding: 80px 0;
+  background: var(--accent-gold);
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+}
+
+.lawyer-card {
+  transition: var(--transition);
+}
+
+.lawyer-card:hover {
+  transform: translateY(-6px);
+}
+
+.image-wrapper {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.lawyer-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.lawyer-card:hover .lawyer-img {
+  transform: scale(1.05);
+}
+
+.lawyer-info p {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.view-more-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--primary-dark);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.view-more-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* ===========================
+   LEGAL ANSWERS
+=========================== */
+
+.legal-answers-section {
+  padding: 80px 0;
+  background: var(--light-bg);
+}
+
+.answer-card {
+  background: #fff;
+  border: 2px solid var(--accent-gold);
+  padding: 40px 25px;
+  border-radius: 10px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.answer-card:hover {
+  transform: translateY(-6px);
+}
+
+.answer-badge {
+  width: 50px;
+  height: 50px;
+  background: var(--accent-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-weight: 700;
+}
+
+.answers-navigation button {
+  width: 45px;
+  height: 45px;
+  background: var(--accent-gold);
+  border: none;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.answers-navigation button:hover {
+  transform: scale(1.1);
+}
+
+/* ===========================
+   WHY CHOOSE US
+=========================== */
+
+.why-choose-section {
+  background: var(--accent-gold);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 38px;
+  transition: var(--transition);
+}
+
+.feature-item:hover .feature-icon {
+  transform: scale(1.1);
+}
+
+/* ===========================
+   PRACTICE AREA
+=========================== */
+
+.practice-area-section {
+  background: var(--light-bg);
+  padding: 80px 0;
+}
+
+.practice-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.practice-column {
+  flex: 1 1 280px;
+  max-width: 350px;
+}
+
+.practice-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.practice-column li {
+  margin-bottom: 12px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.practice-column li:hover {
+  color: var(--accent-gold);
+}
+
+.divider-column {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .divider-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    position: relative;
+  }
+
+  .vertical-line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: #000;
+  }
+}
+
+/* ===========================
+   HOW IT WORKS
+=========================== */
+
+.how-it-works-section {
+  background: var(--accent-gold);
+  padding: 80px 0;
+}
+
+.how-card {
+  transition: var(--transition);
+}
+
+.how-card:hover {
+  transform: translateY(-6px);
+}
+
+.how-card i{
+  font-size: 1.75rem;
+}
+
+/* ===========================
+   TESTIMONIALS
+=========================== */
+
+.client-testimonial-section {
+  background: var(--light-bg);
+  padding: 100px 0;
+}
+
+.testimonial-card {
+  background: #e9e9e9;
+  padding: 50px 25px 40px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-avatar {
+  width: 70px;
+  height: 70px;
+  background: var(--accent-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0 auto 20px;
+  border: 2px solid #000;
+}
+
+.testimonial-navigation button {
+  width: 45px;
+  height: 45px;
+  background: var(--accent-gold);
+  border: none;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.testimonial-navigation button:hover {
+  transform: scale(1.1);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+
+.main-footer {
+  background: var(--primary-dark);
+  color: #fff;
+  padding: 5rem 1.2rem 2.5rem;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 70rem;
+  margin: auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.footer-column {
+  flex: 1 1 18rem;
+}
+
+.footer-title {
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.footer-title::after {
+  content: "";
+  width: 2.5rem;
+  height: 0.18rem;
+  background: var(--accent-gold);
+  display: block;
+  margin-top: 0.6rem;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-bottom: 0.5rem;
+  transition: var(--transition);
+}
+
+.footer-list li:hover {
+  color: var(--accent-gold);
+}
+
+.footer-divider {
+  border-top: 0.06rem solid #333;
+  margin: 2.5rem 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--accent-gold);
+}
+
+/* SOCIAL ICONS */
+
+.footer-social-row {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.footer-social-row a {
+  color: #fff;
+  font-size: 1.3rem;
+  transition: var(--transition);
+}
+
+.footer-social-row a:hover {
+  color: var(--accent-gold);
+  transform: translateY(-0.2rem);
+}
+
+.footer-disclaimer {
+  max-width: 52rem;
+  margin: auto;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+.footer-bottom {
+  margin-top: 1.2rem;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-title::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .footer-links {
+    gap: 1.2rem;
+  }
+
+  .footer-social-row a {
+    font-size: 1.5rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Lawyer Registration Page */
+
